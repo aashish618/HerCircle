@@ -15,7 +15,7 @@ const DEMO_USERS: Record<UserRole, User | null> = {
     joinedAt: '2024-02-14T09:30:00Z',
     bio: 'Data analyst based in Mumbai. Applied to connect with elder women who navigated corporate leadership.',
   },
-  member: mockUsers[0], // Priya Sharma
+  member: mockUsers[0], // Kajal Sharma
   moderator: mockUsers[3], // Kavita Nair
 };
 

@@ -27,7 +27,7 @@ export function RoleSwitcher() {
       value: 'member',
       label: 'Member',
       icon: Sparkles,
-      desc: 'Priya Sharma (full access: discussions, circles, mentors, Q&A)',
+      desc: 'Kajal Sharma (full access: discussions, circles, mentors, Q&A)',
     },
     {
       value: 'moderator',

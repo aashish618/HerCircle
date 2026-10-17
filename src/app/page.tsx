@@ -147,7 +147,7 @@ export default function LandingPage() {
               <div className="flex -space-x-2">
                 <img
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-                  alt="Priya"
+                  alt="Kajal"
                   className="w-8 h-8 rounded-full border-2 border-[#DDD4FA] object-cover"
                 />
                 <img
@@ -172,7 +172,7 @@ export default function LandingPage() {
               </h2>
 
               <p className="text-xs text-purple-900/80 font-medium">
-                Priya S. and 4 elder sisters shared exact counter-offer scripts and compensation templates.
+                Kajal S. and 4 elder sisters shared exact counter-offer scripts and compensation templates.
               </p>
             </div>
 
@@ -551,12 +551,12 @@ export default function LandingPage() {
                   <div className="w-8 h-8 rounded-full overflow-hidden bg-purple-200">
                     <img
                       src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-                      alt="Priya S."
+                      alt="Kajal S."
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-white">Priya Sharma</p>
+                    <p className="text-xs font-bold text-white">Kajal Sharma</p>
                     <p className="text-[11px] text-gray-400">Software Engineer • Mumbai</p>
                   </div>
                 </div>

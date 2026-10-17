@@ -18,7 +18,11 @@ export default function ElderSisterPage() {
   return (
     <div className="space-y-10 py-2">
       {/* 3D Violet Hero Banner matching Live Feed */}
-      <div className="rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-8 border border-purple-300/60 shadow-md card-3d relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D0BCF8] to-[#BEA2F6] p-6 sm:p-8 border border-purple-300/80 shadow-[0_15px_35px_rgba(124,58,237,0.2)] card-3d relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+        {/* Ambient Glowing 3D Lights inside banner */}
+        <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-gradient-to-br from-white/40 via-purple-300/35 to-indigo-500/35 blur-2xl pointer-events-none" />
+        <div className="absolute -bottom-10 left-16 w-44 h-44 rounded-full bg-gradient-to-tr from-pink-400/30 via-rose-300/20 to-purple-400/25 blur-2xl pointer-events-none" />
+
         <div className="space-y-3 max-w-xl relative z-10">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-purple-950 font-mono">
             <HeartHandshake className="w-3.5 h-3.5 text-purple-700" />
@@ -49,8 +53,8 @@ export default function ElderSisterPage() {
         </div>
 
         {/* 3D Pearlescent & Metallic Bubble Spheres Cluster */}
-        <div className="hidden md:flex items-center justify-center shrink-0 pr-4 relative z-10">
-          <BubbleSpheres3D className="scale-125" />
+        <div className="flex items-center justify-center shrink-0 pr-4 relative z-10 scale-110 sm:scale-125">
+          <BubbleSpheres3D />
         </div>
       </div>
 

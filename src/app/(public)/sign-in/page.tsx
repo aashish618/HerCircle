@@ -27,7 +27,7 @@ export default function SignInPage() {
           Welcome back to HerMaitri
         </h1>
         <p className="text-xs text-[var(--color-muted)]">
-          Prototype demo mode: Click Sign In to enter as Approved Member (Priya Sharma).
+          Prototype demo mode: Click Sign In to enter as Approved Member (Kajal Sharma).
         </p>
       </div>
 

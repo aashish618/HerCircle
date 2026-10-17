@@ -30,7 +30,7 @@ export const mockReports: Report[] = [
   {
     id: 'rep-3',
     reporterId: 'user-1',
-    reporterName: 'Priya Sharma',
+    reporterName: 'Kajal Sharma',
     targetType: 'comment',
     targetId: 'comm-77',
     targetPreview: 'Aggressive dismissal of a member\'s distress regarding domestic conflict',

@@ -39,7 +39,7 @@ A floating role-switcher widget is pinned at the bottom-right of every screen, a
 |------|------------------------|
 | **Visitor** | Unauthenticated public view: landing, how it works, guidelines, crisis resources, application form |
 | **Applicant** | Application submitted; views the pending approval state |
-| **Approved Member** | Logged in as **Priya Sharma** (Bengaluru): full access to discussions, circles, mentors, anonymous questions, comments, saves |
+| **Approved Member** | Logged in as **Kajal Sharma** (Bengaluru): full access to discussions, circles, mentors, anonymous questions, comments, saves |
 | **Moderator / Admin** | Logged in as **Kavita Nair** (Kochi): access to moderator dashboard, report queue, application review queue, and circle rules management |
 
 ---

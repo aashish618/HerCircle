@@ -87,10 +87,13 @@
 
 /* ── Base ── */
 body {
-  background-color: var(--color-canvas);
+  background-color: #DDD4FA;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(221, 212, 250, 0.45) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(200, 121, 130, 0.15) 0px, transparent 50%);
+    radial-gradient(at 15% 15%, rgba(147, 51, 234, 0.28) 0px, transparent 55%),
+    radial-gradient(at 85% 10%, rgba(99, 102, 241, 0.26) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(192, 132, 252, 0.22) 0px, transparent 60%),
+    radial-gradient(at 10% 85%, rgba(244, 114, 182, 0.22) 0px, transparent 50%),
+    radial-gradient(at 90% 85%, rgba(168, 85, 247, 0.28) 0px, transparent 55%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-dm-sans, system-ui, sans-serif);
@@ -193,6 +196,53 @@ body {
   }
 }
 
+@keyframes float-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate3d(14px, -18px, 0) rotate(3deg) scale(1.04);
+  }
+  66% {
+    transform: translate3d(-12px, -32px, 0) rotate(-3deg) scale(0.97);
+  }
+}
+
+@keyframes float-bob {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.85);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(14px, -48px, 0) scale(1.08);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(-10px, -95px, 0) scale(0.9);
+    opacity: 0.45;
+  }
+}
+
+@keyframes aura-glow {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.15) rotate(15deg);
+  }
+}
+
 @keyframes pulse-slow {
   0%, 100% {
     opacity: 0.6;
@@ -219,6 +269,22 @@ body {
 
 .animate-float-reverse {
   animation: float-reverse 8s ease-in-out infinite;
+}
+
+.animate-float-drift {
+  animation: float-drift 9s ease-in-out infinite;
+}
+
+.animate-float-bob {
+  animation: float-bob 5s ease-in-out infinite;
+}
+
+.animate-bubble-rise {
+  animation: bubble-rise 8s ease-in-out infinite;
+}
+
+.animate-aura-glow {
+  animation: aura-glow 11s ease-in-out infinite;
 }
 
 .animate-pulse-slow {

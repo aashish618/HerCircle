@@ -206,7 +206,7 @@ export default function DesignSystemPage() {
         <div className="rounded-xl border border-[var(--color-border)] bg-white/80 p-6 space-y-4">
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center space-x-2">
-              <Avatar name="Priya Sharma" size="sm" />
+              <Avatar name="Kajal Sharma" size="sm" />
               <span className="text-xs text-[var(--color-muted)]">SM (28px)</span>
             </div>
             <div className="flex items-center space-x-2">

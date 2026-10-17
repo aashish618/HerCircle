@@ -3,7 +3,7 @@ import { User } from '@/lib/types';
 export const mockUsers: User[] = [
   {
     id: 'user-1',
-    displayName: 'Priya Sharma',
+    displayName: 'Kajal Sharma',
     bio: 'Senior Backend Engineer at a fintech startup. Passionate about women in tech, system design, and building confidence in negotiations.',
     city: 'Bengaluru',
     role: 'member',

@@ -123,7 +123,7 @@ export default function SettingsPage() {
             In production, this generates a cryptographically signed download archive containing all your authored discussions, replies, reactions, and saved items.
           </p>
           <pre className="rounded-lg bg-black/5 p-3 font-mono text-[11px] overflow-x-auto">
-            {JSON.stringify({ user: 'Priya Sharma', discussions_count: 2, comments_count: 5 }, null, 2)}
+            {JSON.stringify({ user: 'Kajal Sharma', discussions_count: 2, comments_count: 5 }, null, 2)}
           </pre>
           <div className="flex justify-end pt-2">
             <Button size="sm" onClick={() => setExportOpen(false)}>

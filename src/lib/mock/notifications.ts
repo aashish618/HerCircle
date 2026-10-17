@@ -6,7 +6,7 @@ export const mockNotifications: Notification[] = [
     userId: 'user-1',
     type: 'reply',
     title: 'New reply to your negotiation playbook',
-    body: 'Sneha Reddy replied: "Thank you Priya didi! As a junior engineer..."',
+    body: 'Sneha Reddy replied: "Thank you Kajal didi! As a junior engineer..."',
     link: '/discussions/disc-1',
     isRead: false,
     createdAt: '2024-02-10T12:30:00Z',
