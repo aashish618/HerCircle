@@ -114,7 +114,7 @@ export default function LandingPage() {
         {/* ── HORIZONTAL CAROUSEL SHOWCASE (Matching Image 1) ── */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
           {/* Card 1: Lavender Discussion Card (Span 4) */}
-          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-hover relative overflow-hidden min-h-[420px]">
+          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-3d relative overflow-hidden min-h-[420px]">
             {/* Top row */}
             <div className="flex items-center justify-between">
               <div className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-purple-900 shadow-xs">
@@ -175,7 +175,7 @@ export default function LandingPage() {
           </div>
 
           {/* Card 2: Spotlight Mentor Centerpiece (Span 4) */}
-          <div className="md:col-span-4 rounded-[28px] relative overflow-hidden shadow-md card-hover min-h-[420px] flex flex-col justify-between group">
+          <div className="md:col-span-4 rounded-[28px] relative overflow-hidden shadow-md card-3d min-h-[420px] flex flex-col justify-between group">
             {/* Background Mentor Photo */}
             <img
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
@@ -196,7 +196,7 @@ export default function LandingPage() {
             </div>
 
             {/* Bottom Overlay Card matching Image 1 */}
-            <div className="relative z-10 m-4 p-4 rounded-2xl bg-white shadow-lg flex items-center justify-between">
+            <div className="relative z-10 m-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg flex items-center justify-between">
               <div>
                 <h3 className="text-sm font-bold text-gray-950 leading-tight">
                   Dr. Ananya&apos;s Tech Corner
@@ -215,10 +215,10 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Card 3: Mindful / Wellness Frosted Card (Span 4) */}
-          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#D8E8F5] via-[#CEE0F0] to-[#BED6EC] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-hover relative overflow-hidden min-h-[420px]">
+          {/* Card 3: Mindful / Wellness Frosted Card with 3D Floating Bubbles (Span 4) */}
+          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#D8E8F5] via-[#CEE0F0] to-[#BED6EC] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-3d relative overflow-hidden min-h-[420px]">
             {/* Top row */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between relative z-10">
               <div className="w-9 h-9 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-blue-900 shadow-xs">
                 <MessageSquare className="w-4 h-4" />
               </div>
@@ -227,13 +227,28 @@ export default function LandingPage() {
               </span>
             </div>
 
-            {/* Center Content with 3D Mindful Bubble Art aesthetic */}
-            <div className="space-y-4 my-auto pt-4">
+            {/* 3D Floating Pearlescent Spheres matching reference Image 1 */}
+            <div className="relative my-2 h-36 flex items-center justify-center">
+              {/* Bronze/Rose Gold Metallic Orb */}
+              <div className="absolute top-2 left-10 w-12 h-12 rounded-full bg-gradient-to-br from-amber-200 via-amber-600 to-amber-900 shadow-[0_10px_25px_rgba(180,83,9,0.35),inset_0_2px_4px_rgba(255,255,255,0.8)] border border-amber-300/40 animate-float-slow" />
+              
+              {/* Cluster of Frosted Glass Blue Spheres */}
+              <div className="relative w-28 h-28 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-white via-sky-300/70 to-blue-500/80 shadow-[0_15px_35px_rgba(59,130,246,0.35),inset_0_4px_8px_rgba(255,255,255,0.9)] border border-white/60 animate-float-reverse">
+                  <div className="absolute top-2 left-3 w-8 h-4 rounded-full bg-white/90 rotate-[-25deg] blur-[1px]" />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-14 h-14 rounded-full bg-gradient-to-br from-white/90 via-sky-200 to-blue-400 shadow-[0_8px_20px_rgba(59,130,246,0.25)] border border-white/80 animate-float-slow delay-300" />
+                <div className="absolute -top-1 -left-2 w-10 h-10 rounded-full bg-gradient-to-br from-white via-indigo-200 to-purple-400 shadow-[0_6px_16px_rgba(99,102,241,0.25)] border border-white/80 animate-float-reverse delay-500" />
+              </div>
+            </div>
+
+            {/* Center Content */}
+            <div className="space-y-2 relative z-10">
               <div className="inline-block px-3 py-1 rounded-full bg-white/60 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-blue-950 font-mono">
                 PCOS & HORMONAL CARE
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-950 leading-snug font-sans">
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-950 leading-snug font-sans">
                 Into the Mindful Mornings
               </h2>
 
@@ -243,7 +258,7 @@ export default function LandingPage() {
             </div>
 
             {/* Bottom Row */}
-            <div className="flex items-center justify-between pt-4 border-t border-blue-200/50">
+            <div className="flex items-center justify-between pt-4 border-t border-blue-200/50 relative z-10">
               <span className="text-[11px] font-bold uppercase tracking-wider text-blue-950 flex items-center space-x-1">
                 <span>◎ SANCTUARY</span>
               </span>

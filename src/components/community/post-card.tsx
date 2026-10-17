@@ -33,7 +33,7 @@ export function PostCard({ discussion }: { discussion: Discussion }) {
 
   return (
     <>
-      <article className="rounded-xl border border-[var(--color-border)] bg-white/90 p-5 shadow-[var(--shadow-card)] card-hover transition-all space-y-3 relative">
+      <article className="rounded-2xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-5 shadow-[var(--shadow-card)] card-3d space-y-3 relative">
         {/* Header Metadata */}
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center space-x-2.5 min-w-0">

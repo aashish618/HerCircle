@@ -7,20 +7,22 @@ import { Sidebar } from './sidebar';
 import { MobileNav } from './mobile-nav';
 import { PrototypeBanner } from '@/components/shared/prototype-banner';
 import { RoleSwitcher } from './role-switcher';
+import { Background3D } from '@/components/shared/background-3d';
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isLanding = pathname === '/';
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#EBE7F6] text-[var(--color-charcoal)] antialiased">
+    <div className="min-h-screen flex flex-col bg-[#EBE7F6] text-[var(--color-charcoal)] antialiased relative overflow-x-hidden">
+      <Background3D />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
       <PrototypeBanner />
 
       {/* Centered Floating Canvas matching user reference designs */}
-      <div className="flex-1 flex flex-col w-full max-w-[1400px] mx-auto sm:my-4 md:my-6 sm:rounded-[36px] bg-white shadow-[0_25px_70px_-15px_rgba(50,30,90,0.12)] border border-white/80 overflow-hidden">
+      <div className="flex-1 flex flex-col w-full max-w-[1400px] mx-auto sm:my-4 md:my-6 sm:rounded-[36px] bg-white/95 backdrop-blur-xl shadow-[0_25px_70px_-15px_rgba(50,30,90,0.15)] border border-white/80 overflow-hidden relative z-10">
         <Header />
 
         {isLanding ? (

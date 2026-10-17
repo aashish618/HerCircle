@@ -45,11 +45,14 @@ export default function FeedPage() {
 
   return (
     <div className="space-y-8 py-2">
-      {/* Personalized Greeting Header */}
-      <div className="rounded-2xl border border-[var(--color-border)] bg-gradient-to-r from-[var(--color-ivory-warm)] via-white to-[var(--color-lavender-light)]/40 p-6 md:p-8 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      {/* Personalized Greeting Header with 3D depth */}
+      <div className="rounded-3xl border border-white/80 bg-gradient-to-r from-purple-50/90 via-white to-pink-50/60 backdrop-blur-md p-6 md:p-8 space-y-4 shadow-[0_10px_30px_rgba(50,30,90,0.06)] relative overflow-hidden card-3d">
+        {/* Subtle decorative 3D sphere */}
+        <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-white/90 via-purple-200/60 to-pink-300/40 shadow-lg border border-white animate-float-slow pointer-events-none" />
+
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 relative z-10">
           <div className="space-y-1">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-rose-dark)]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-rose-dark)] font-mono">
               Welcome to the Circle
             </span>
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--color-charcoal)]">
