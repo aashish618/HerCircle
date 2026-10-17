@@ -2,22 +2,33 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { mockCrisisResources } from '@/lib/mock/crisis';
-import { ShieldAlert, PhoneCall, Lock, HeartHandshake } from 'lucide-react';
+import { BubbleSpheres3D } from '@/components/shared/bubble-spheres-3d';
+import { ShieldAlert, PhoneCall, Lock, HeartHandshake, ShieldCheck } from 'lucide-react';
 
 export default function SafetyPage() {
   return (
-    <div className="space-y-8 py-4">
-      <div className="space-y-2 border-b border-[var(--color-border)] pb-6">
-        <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[var(--color-rose-light)] text-xs font-semibold text-[var(--color-rose-dark)]">
-          <ShieldAlert className="w-3.5 h-3.5" />
-          <span>Trust, Safety & Emergency Pathways</span>
+    <div className="space-y-8 py-2">
+      {/* 3D Violet Hero Banner matching Live Feed */}
+      <div className="rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-8 border border-purple-300/60 shadow-md card-3d relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="space-y-3 max-w-xl relative z-10">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-purple-950 font-mono">
+            <ShieldAlert className="w-3.5 h-3.5 text-rose-600" />
+            <span>TRUST, SAFETY & CRISIS PATHWAYS</span>
+          </div>
+
+          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-gray-950 leading-tight">
+            Privacy, Safety & Emergency Resources
+          </h1>
+
+          <p className="text-xs sm:text-sm text-purple-950/80 leading-relaxed font-medium">
+            If you or someone in your circle is facing immediate danger, violence, or mental distress, please connect with these verified crisis helplines across India.
+          </p>
         </div>
-        <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-charcoal)]">
-          Privacy, Safety & Emergency Resources
-        </h1>
-        <p className="text-sm text-[var(--color-charcoal-light)] max-w-2xl leading-relaxed">
-          If you or someone in your circle is facing immediate danger, violence, or mental distress, please connect with these verified crisis helplines in India.
-        </p>
+
+        {/* 3D Bubble Spheres Cluster */}
+        <div className="hidden md:flex items-center justify-center shrink-0 pr-4 relative z-10">
+          <BubbleSpheres3D className="scale-125" />
+        </div>
       </div>
 
       {/* Verified Helplines Directory */}

@@ -3,11 +3,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { mockCircles } from '@/lib/mock/circles';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 import { TopicChip } from '@/components/community/topic-chip';
-import { Users, MessageSquare, Search, ArrowRight } from 'lucide-react';
+import { BubbleSpheres3D } from '@/components/shared/bubble-spheres-3d';
+import { Users, MessageSquare, Search, ArrowRight, ArrowUpRight, Compass } from 'lucide-react';
 
 export default function CirclesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,50 +19,77 @@ export default function CirclesPage() {
 
   return (
     <div className="space-y-8 py-2">
-      <div className="border-b border-[var(--color-border)] pb-4 space-y-2">
-        <h1 className="font-serif text-3xl font-bold text-[var(--color-charcoal)]">
-          Explore Topic Circles
-        </h1>
-        <p className="text-sm text-[var(--color-charcoal-light)]">
-          Nine private, moderated circles designed around the real facets of Indian women&apos;s lives.
-        </p>
+      {/* 3D Violet Hero Banner matching Live Feed */}
+      <div className="rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-8 border border-purple-300/60 shadow-md card-3d relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="space-y-3 max-w-xl relative z-10">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-purple-950 font-mono">
+            <Compass className="w-3.5 h-3.5 text-purple-700" />
+            <span>COMMUNITY HUBS • 9 CIRCLES</span>
+          </div>
+
+          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-gray-950 leading-tight">
+            Explore Topic Circles
+          </h1>
+
+          <p className="text-xs sm:text-sm text-purple-950/80 leading-relaxed font-medium">
+            Nine private, moderated circles designed around the real facets of Indian women&apos;s lives. Join circles to participate in focused discussions.
+          </p>
+        </div>
+
+        {/* 3D Pearlescent & Metallic Bubble Spheres Cluster */}
+        <div className="hidden md:flex items-center justify-center shrink-0 pr-4 relative z-10">
+          <BubbleSpheres3D className="scale-125" />
+        </div>
       </div>
 
-      <div className="max-w-md">
+      {/* Search Input */}
+      <div className="max-w-md relative">
         <Input
           placeholder="Search circles by name or topic..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
+          className="rounded-full bg-white/90 border-purple-200/80 pl-4 py-2.5 text-xs shadow-xs focus:border-purple-500"
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Circle Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {filteredCircles.map((circle) => (
-          <Card key={circle.id} className="flex flex-col justify-between hover:border-[var(--color-rose)] transition">
-            <CardHeader>
-              <div className="flex items-center justify-between pb-2">
+          <div
+            key={circle.id}
+            className="rounded-[24px] border border-purple-200/80 bg-white/90 backdrop-blur-sm p-6 shadow-sm card-3d flex flex-col justify-between space-y-4 hover:border-purple-400 hover:shadow-md transition group"
+          >
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
                 <TopicChip name={circle.name} slug={circle.slug} iconName={circle.icon} />
-                <span className="text-xs text-[var(--color-muted)] font-mono">
-                  {circle.memberCount} members
+                <span className="text-xs text-purple-900 font-mono font-bold">
+                  {circle.memberCount.toLocaleString()} members
                 </span>
               </div>
-              <CardTitle className="text-lg">{circle.name}</CardTitle>
-              <CardDescription className="line-clamp-2 text-xs leading-relaxed">
+
+              <h2 className="text-xl font-bold text-gray-950 group-hover:text-purple-900 transition">
+                {circle.name}
+              </h2>
+
+              <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">
                 {circle.description}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-2 border-t border-[var(--color-border-light)] flex items-center justify-between text-xs">
-              <span className="text-[var(--color-muted)] flex items-center space-x-1">
-                <MessageSquare className="w-3.5 h-3.5" />
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-purple-100 flex items-center justify-between text-xs">
+              <span className="text-gray-500 flex items-center space-x-1.5 font-medium">
+                <MessageSquare className="w-3.5 h-3.5 text-purple-500" />
                 <span>{circle.discussionCount} conversations</span>
               </span>
+
               <Link href={`/circles/${circle.slug}`}>
-                <Button variant="outline" size="sm" className="text-xs">
-                  Enter Circle <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </Button>
+                <button className="px-4 py-1.5 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-900 text-xs font-bold transition inline-flex items-center space-x-1">
+                  <span>Enter Circle</span>
+                  <ArrowRight className="w-3 h-3 ml-0.5" />
+                </button>
               </Link>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </div>

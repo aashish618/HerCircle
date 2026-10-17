@@ -22,6 +22,8 @@ import {
   Compass,
 } from 'lucide-react';
 
+import { BubbleSpheres3D } from '@/components/shared/bubble-spheres-3d';
+
 export default function FeedPage() {
   const { user } = useAuth();
   const { createdDiscussions } = useDemo();
@@ -45,41 +47,45 @@ export default function FeedPage() {
 
   return (
     <div className="space-y-8 py-2">
-      {/* Personalized Greeting Header with 3D depth */}
-      <div className="rounded-3xl border border-white/80 bg-gradient-to-r from-purple-50/90 via-white to-pink-50/60 backdrop-blur-md p-6 md:p-8 space-y-4 shadow-[0_10px_30px_rgba(50,30,90,0.06)] relative overflow-hidden card-3d">
-        {/* Subtle decorative 3D sphere */}
-        <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-white/90 via-purple-200/60 to-pink-300/40 shadow-lg border border-white animate-float-slow pointer-events-none" />
-
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 relative z-10">
-          <div className="space-y-1">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-rose-dark)] font-mono">
-              Welcome to the Circle
-            </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--color-charcoal)]">
-              Namaste, {user?.displayName || 'Sister'}
-            </h1>
-            <p className="text-xs text-[var(--color-charcoal-light)]">
-              What perspective or question is on your mind today?
-            </p>
+      {/* 3D Violet Greeting Header matching Live Feed */}
+      <div className="rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-8 border border-purple-300/60 shadow-md card-3d relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="space-y-3 max-w-xl relative z-10">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-purple-950 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-purple-700" />
+            <span>WELCOME TO THE CIRCLE</span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <Link href="/ask">
-              <Button variant="secondary" size="sm" className="shadow-sm text-xs">
-                <MessageCircleQuestion className="w-3.5 h-3.5 mr-1 text-[var(--color-rose-dark)]" />
-                Ask Anonymously
+          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-gray-950 leading-tight">
+            Namaste, {user?.displayName || 'Sister'}
+          </h1>
+
+          <p className="text-xs sm:text-sm text-purple-950/80 leading-relaxed font-medium">
+            What perspective or question is on your mind today? Connect, ask with pseudonyms, or seek advice from elder sisters.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-2.5 pt-1">
+            <Link href="/discussions/new">
+              <Button size="sm" className="bg-purple-950 hover:bg-black text-white rounded-full px-5 py-2 text-xs font-semibold shadow-sm inline-flex items-center">
+                <Plus className="w-3.5 h-3.5 mr-1" />
+                Start Discussion
               </Button>
             </Link>
-            <Link href="/discussions/new">
-              <Button size="sm" className="shadow-sm text-xs">
-                <Plus className="w-3.5 h-3.5 mr-1" />
-                New Discussion
+            <Link href="/ask">
+              <Button variant="outline" size="sm" className="bg-white/80 hover:bg-white text-purple-950 border-purple-200 rounded-full px-5 py-2 text-xs font-semibold inline-flex items-center">
+                <MessageCircleQuestion className="w-3.5 h-3.5 mr-1 text-purple-800" />
+                Ask Anonymously
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* Quick Topic Discovery Scroll */}
+        {/* 3D Bubble Spheres Cluster */}
+        <div className="hidden md:flex items-center justify-center shrink-0 pr-4 relative z-10">
+          <BubbleSpheres3D className="scale-125" />
+        </div>
+      </div>
+
+      {/* Quick Topic Discovery Scroll */}
         <div className="pt-2 border-t border-[var(--color-border-light)]">
           <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-muted)] mb-2">
             Explore Topics
@@ -96,7 +102,6 @@ export default function FeedPage() {
             ))}
           </div>
         </div>
-      </div>
 
       {/* Ask an Elder Sister Banner */}
       <div className="rounded-xl border border-[var(--color-lavender)] bg-[var(--color-lavender-light)]/60 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">

@@ -58,13 +58,13 @@ export function Sidebar() {
   return (
     <aside
       aria-label="Sidebar navigation"
-      className="hidden md:flex flex-col w-64 shrink-0 border-r border-[var(--color-border)] min-h-[calc(100vh-4rem)] p-4 space-y-6"
+      className="hidden md:flex flex-col w-64 shrink-0 border-r border-purple-200/50 min-h-[calc(100vh-4rem)] p-4 space-y-6"
     >
       <div className="space-y-1">
-        <p className="px-3 text-[11px] font-bold uppercase tracking-wider text-[var(--color-muted)]">
+        <p className="px-3 text-[11px] font-bold uppercase tracking-wider text-purple-900/60 font-mono">
           {isMember ? 'Community' : 'About HerMaitri'}
         </p>
-        <nav className="space-y-0.5">
+        <nav className="space-y-1">
           {currentNav.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
@@ -73,13 +73,13 @@ export function Sidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'flex items-center space-x-3 px-3 py-2 rounded-xl text-sm font-medium transition-colors',
+                  'flex items-center space-x-3 px-3 py-2 rounded-xl text-xs font-semibold transition-all',
                   isActive
-                    ? 'bg-[var(--color-lavender)] text-[var(--color-charcoal)] font-semibold shadow-sm'
-                    : 'text-[var(--color-charcoal-light)] hover:bg-black/5 hover:text-[var(--color-charcoal)]'
+                    ? 'bg-purple-200/80 text-purple-950 font-bold shadow-xs'
+                    : 'text-purple-950/70 hover:bg-purple-100/60 hover:text-purple-950'
                 )}
               >
-                <Icon className={cn('w-4 h-4', isActive ? 'text-[var(--color-rose-dark)]' : 'text-[var(--color-muted)]')} />
+                <Icon className={cn('w-4 h-4', isActive ? 'text-purple-900' : 'text-purple-400')} />
                 <span>{item.label}</span>
               </Link>
             );

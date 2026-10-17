@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { HelpCircle, ShieldCheck, PhoneCall, ArrowRight } from 'lucide-react';
+import { HelpCircle, ShieldCheck, PhoneCall, ArrowRight, Sparkles } from 'lucide-react';
+import { BubbleSpheres3D } from '@/components/shared/bubble-spheres-3d';
 
 export default function HelpCenterPage() {
   const faqs = [
@@ -26,13 +27,27 @@ export default function HelpCenterPage() {
 
   return (
     <div className="space-y-8 py-2">
-      <div className="border-b border-[var(--color-border)] pb-4 space-y-1">
-        <h1 className="font-serif text-3xl font-bold text-[var(--color-charcoal)]">
-          Help Center & FAQs
-        </h1>
-        <p className="text-sm text-[var(--color-charcoal-light)]">
-          Answers to common questions about HerMaitri membership, privacy, and community etiquette.
-        </p>
+      {/* 3D Violet Hero Banner matching Live Feed */}
+      <div className="rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-8 border border-purple-300/60 shadow-md card-3d relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="space-y-3 max-w-xl relative z-10">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-purple-950 font-mono">
+            <HelpCircle className="w-3.5 h-3.5 text-purple-700" />
+            <span>KNOWLEDGE BASE & GUIDANCE</span>
+          </div>
+
+          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-gray-950 leading-tight">
+            Help Center & FAQs
+          </h1>
+
+          <p className="text-xs sm:text-sm text-purple-950/80 leading-relaxed font-medium">
+            Answers to common questions about HerMaitri membership, privacy, anonymous questions, and community etiquette.
+          </p>
+        </div>
+
+        {/* 3D Bubble Spheres Cluster */}
+        <div className="hidden md:flex items-center justify-center shrink-0 pr-4 relative z-10">
+          <BubbleSpheres3D className="scale-125" />
+        </div>
       </div>
 
       <div className="space-y-4">
