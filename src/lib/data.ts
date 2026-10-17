@@ -20,7 +20,7 @@ import { mockNotifications } from './mock/notifications';
 import { mockCrisisResources } from './mock/crisis';
 
 /**
- * Data Access Layer (DAL) for HerCircle.
+ * Data Access Layer (DAL) for HerMaitri.
  * These functions simulate asynchronous database queries.
  * In Phase 2, these will connect directly to Supabase with RLS.
  */

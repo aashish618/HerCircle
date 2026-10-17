@@ -8,10 +8,10 @@ export default function SignUpPage() {
   return (
     <div className="max-w-md mx-auto py-10 text-center space-y-4">
       <h1 className="font-serif text-3xl font-bold text-[var(--color-charcoal)]">
-        Join HerCircle
+        Join HerMaitri
       </h1>
       <p className="text-sm text-[var(--color-charcoal-light)]">
-        HerCircle is a private, curated space. All prospective members join by submitting a short membership application reviewed by human moderators.
+        HerMaitri is a private, curated space. All prospective members join by submitting a short membership application reviewed by human moderators.
       </p>
       <div className="pt-4">
         <Link href="/apply">

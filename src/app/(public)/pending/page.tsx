@@ -23,7 +23,7 @@ export default function PendingPage() {
           Your Application is Pending
         </h1>
         <p className="text-sm text-[var(--color-charcoal-light)] leading-relaxed">
-          Thank you for applying to HerCircle! Our human community moderators review every application individually to ensure our sanctuary remains safe and authentic.
+          Thank you for applying to HerMaitri! Our human community moderators review every application individually to ensure our sanctuary remains safe and authentic.
         </p>
       </div>
 

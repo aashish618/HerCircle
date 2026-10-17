@@ -36,7 +36,7 @@ export default function DesignSystemPage() {
           <span className="text-xs font-mono text-[var(--color-muted)]">Checkpoint 1</span>
         </div>
         <h1 className="font-serif text-3xl md:text-4xl font-bold tracking-tight text-[var(--color-charcoal)]">
-          HerCircle Design System & Component Library
+          HerMaitri Design System & Component Library
         </h1>
         <p className="text-sm text-[var(--color-charcoal-light)] max-w-2xl leading-relaxed">
           The visual foundations, typography scale, design tokens, and comprehensive states for all reusable UI components.
@@ -134,7 +134,7 @@ export default function DesignSystemPage() {
           <div className="pt-4">
             <p className="text-xs font-mono text-[var(--color-muted)] mb-1">Body Text (DM Sans Regular, 15px, 1.6 line-height)</p>
             <p className="text-sm text-[var(--color-charcoal-light)] leading-relaxed max-w-2xl">
-              HerCircle is designed to be a sanctuary from online toxicity. Discussions are private, anonymous options protect your identity from peers, and seasoned mentors guide younger women through career crossroads and life decisions.
+              HerMaitri is designed to be a sanctuary from online toxicity. Discussions are private, anonymous options protect your identity from peers, and seasoned mentors guide younger women through career crossroads and life decisions.
             </p>
           </div>
 
@@ -244,7 +244,7 @@ export default function DesignSystemPage() {
           />
           <div className="md:col-span-2">
             <Textarea
-              label="Why do you wish to join HerCircle?"
+              label="Why do you wish to join HerMaitri?"
               placeholder="Tell our review team a little about your journey..."
               helperText="Reviewed by human community moderators before access is granted."
             />
@@ -336,7 +336,7 @@ export default function DesignSystemPage() {
           >
             <div className="space-y-3 text-sm text-[var(--color-charcoal-light)]">
               <p>
-                HerCircle is a sanctuary built on mutual kindness, privacy, and non-judgment. We hold each other in dignity.
+                HerMaitri is a sanctuary built on mutual kindness, privacy, and non-judgment. We hold each other in dignity.
               </p>
               <div className="flex justify-end space-x-2 pt-2">
                 <Button variant="outline" size="sm" onClick={() => setDialogOpen(false)}>

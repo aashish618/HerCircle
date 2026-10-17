@@ -11,10 +11,10 @@ export default function GuidelinesPage() {
           <span>Core Community Standards</span>
         </div>
         <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-charcoal)]">
-          HerCircle Community Guidelines
+          HerMaitri Community Guidelines
         </h1>
         <p className="text-sm text-[var(--color-charcoal-light)] max-w-2xl leading-relaxed">
-          HerCircle is a sanctuary for Indian women across all ages (12+). These rules are enforced by human moderators to preserve mutual trust, privacy, and psychological safety.
+          HerMaitri is a sanctuary for Indian women across all ages (12+). These rules are enforced by human moderators to preserve mutual trust, privacy, and psychological safety.
         </p>
       </div>
 

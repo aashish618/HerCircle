@@ -103,7 +103,7 @@ export const mockUsers: User[] = [
   {
     id: 'user-12',
     displayName: 'Lakshmi Pillai',
-    bio: 'Senior Director of Operations, 22 years in logistics. Trust & safety co-lead on HerCircle.',
+    bio: 'Senior Director of Operations, 22 years in logistics. Trust & safety co-lead on HerMaitri.',
     city: 'Thiruvananthapuram',
     role: 'moderator',
     isMentor: true,

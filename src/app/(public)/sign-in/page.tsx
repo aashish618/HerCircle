@@ -24,7 +24,7 @@ export default function SignInPage() {
       <div className="text-center space-y-2">
         <DemoBadge />
         <h1 className="font-serif text-3xl font-bold text-[var(--color-charcoal)]">
-          Welcome back to HerCircle
+          Welcome back to HerMaitri
         </h1>
         <p className="text-xs text-[var(--color-muted)]">
           Prototype demo mode: Click Sign In to enter as Approved Member (Priya Sharma).

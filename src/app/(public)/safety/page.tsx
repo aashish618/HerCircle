@@ -76,7 +76,7 @@ export default function SafetyPage() {
             <ShieldAlert className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
             <div>
               <p className="font-bold text-[var(--color-charcoal)]">Limits of Privacy</p>
-              <p>While pseudonymity protects you from peers, HerCircle complies with mandatory legal disclosures regarding self-harm or credible threats of violence under Indian statutory requirements.</p>
+              <p>While pseudonymity protects you from peers, HerMaitri complies with mandatory legal disclosures regarding self-harm or credible threats of violence under Indian statutory requirements.</p>
             </div>
           </div>
         </div>

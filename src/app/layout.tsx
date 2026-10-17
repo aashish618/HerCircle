@@ -5,7 +5,7 @@ import { DemoProvider } from '@/contexts/demo-context';
 import { Shell } from '@/components/layout/shell';
 
 export const metadata: Metadata = {
-  title: 'HerCircle — Private Women’s Community & Mentorship',
+  title: 'HerMaitri — India’s Private Women’s Community & Mentorship',
   description:
     'An India-first, private community and mentorship platform for women aged 12+. Thoughtful discussions, anonymous questions, and elder sister guidance.',
   robots: {

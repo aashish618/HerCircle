@@ -33,7 +33,7 @@ export function PrivacyNotice({
           {message ||
             (isAnonymousNotice
               ? 'Anonymous posting provides pseudonymity from fellow community members. It does NOT provide anonymity from privileged security & safety operations in case of serious harm. Private discussions are never indexed by search engines.'
-              : 'HerCircle private discussions are protected. Member content is never used for AI model training without separate explicit consent.')}
+              : 'HerMaitri private discussions are protected. Member content is never used for AI model training without separate explicit consent.')}
         </p>
       </div>
     </div>

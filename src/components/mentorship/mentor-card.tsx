@@ -101,7 +101,7 @@ export function MentorCard({ mentor }: { mentor: MentorProfile }) {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <p className="text-xs text-[var(--color-charcoal-light)] leading-relaxed">
-              HerCircle mentorship operates via transparent, public Q&A threads so guidance benefits other sisters too. No private DMs are allowed in this MVP.
+              HerMaitri mentorship operates via transparent, public Q&A threads so guidance benefits other sisters too. No private DMs are allowed in this MVP.
             </p>
             <Input
               label="Topic of Guidance"

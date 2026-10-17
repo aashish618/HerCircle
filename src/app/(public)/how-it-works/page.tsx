@@ -9,10 +9,10 @@ export default function HowItWorksPage() {
     <div className="space-y-10 py-4">
       <div className="space-y-2 border-b border-[var(--color-border)] pb-6">
         <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-charcoal)]">
-          How HerCircle Works
+          How HerMaitri Works
         </h1>
         <p className="text-sm text-[var(--color-charcoal-light)] max-w-2xl leading-relaxed">
-          HerCircle is an intentional sanctuary designed from the ground up for Indian women. Here is our exact process, safety philosophy, and community architecture.
+          HerMaitri is an intentional sanctuary designed from the ground up for Indian women. Here is our exact process, safety philosophy, and community architecture.
         </p>
       </div>
 
@@ -89,7 +89,7 @@ export default function HowItWorksPage() {
       <div className="pt-2">
         <Link href="/apply">
           <Button size="lg">
-            Apply to Join HerCircle <ArrowRight className="w-4 h-4 ml-1.5" />
+            Apply to Join HerMaitri <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </Link>
       </div>

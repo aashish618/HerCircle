@@ -7,8 +7,8 @@ import { HelpCircle, ShieldCheck, PhoneCall, ArrowRight } from 'lucide-react';
 export default function HelpCenterPage() {
   const faqs = [
     {
-      q: 'Who is eligible to join HerCircle?',
-      a: 'HerCircle is open to all women aged 12 and older, including transgender women. We use human application review to ensure psychological safety without invasive biometric surveillance.',
+      q: 'Who is eligible to join HerMaitri?',
+      a: 'HerMaitri is open to all women aged 12 and older, including transgender women. We use human application review to ensure psychological safety without invasive biometric surveillance.',
     },
     {
       q: 'How does anonymous posting work?',
@@ -16,7 +16,7 @@ export default function HelpCenterPage() {
     },
     {
       q: 'Why can\'t I send private direct messages (DMs)?',
-      a: 'To prevent harassment, unsolicited advances, and predatory behavior, HerCircle MVP routes all mentorship and advice through public Q&A threads.',
+      a: 'To prevent harassment, unsolicited advances, and predatory behavior, HerMaitri MVP routes all mentorship and advice through public Q&A threads.',
     },
     {
       q: 'What should I do if I see harmful content or harassment?',
@@ -31,7 +31,7 @@ export default function HelpCenterPage() {
           Help Center & FAQs
         </h1>
         <p className="text-sm text-[var(--color-charcoal-light)]">
-          Answers to common questions about HerCircle membership, privacy, and community etiquette.
+          Answers to common questions about HerMaitri membership, privacy, and community etiquette.
         </p>
       </div>
 

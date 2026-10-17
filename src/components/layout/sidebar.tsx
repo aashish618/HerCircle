@@ -62,7 +62,7 @@ export function Sidebar() {
     >
       <div className="space-y-1">
         <p className="px-3 text-[11px] font-bold uppercase tracking-wider text-[var(--color-muted)]">
-          {isMember ? 'Community' : 'About HerCircle'}
+          {isMember ? 'Community' : 'About HerMaitri'}
         </p>
         <nav className="space-y-0.5">
           {currentNav.map((item) => {

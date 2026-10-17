@@ -72,7 +72,7 @@ export default function ApplyPage() {
           <span>Membership Application • Step {step} of 3</span>
         </div>
         <h1 className="font-serif text-3xl font-bold text-[var(--color-charcoal)]">
-          Apply to Join HerCircle
+          Apply to Join HerMaitri
         </h1>
         <p className="text-xs text-[var(--color-charcoal-light)]">
           Human-reviewed membership. Open to all women aged 12+, including transgender women.
@@ -167,7 +167,7 @@ export default function ApplyPage() {
                 3. Intent & Community Pledge
               </h2>
               <Textarea
-                label="Why do you wish to join HerCircle?"
+                label="Why do you wish to join HerMaitri?"
                 placeholder="Share a short note on what brought you here and what you hope to find or share..."
                 value={aboutText}
                 onChange={(e) => setAboutText(e.target.value)}

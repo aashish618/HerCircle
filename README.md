@@ -1,4 +1,4 @@
-# HerCircle — India-First Private Women's Community & Mentorship Platform
+# HerMaitri — India-First Private Women's Community & Mentorship Platform
 
 > **Phase 0 & 1 Prototype**: Documentation & Frontend Interactive Prototype  
 > **Target Audience**: Women aged 12+ (inclusive of cisgender and transgender women)  
@@ -23,7 +23,7 @@ npm run dev
 
 ## Overview
 
-HerCircle is a private, curated digital sanctuary for Indian women combining:
+HerMaitri is a private, curated digital sanctuary for Indian women combining:
 1. **Reddit-style discussions** across 9 curated Indian topic circles
 2. **Anonymous questions** with flower pseudonyms (Lotus, Jasmine, Marigold)
 3. **Intergenerational mentorship** ("Ask an Elder Sister") based on stated experience, not ageism

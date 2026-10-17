@@ -85,7 +85,7 @@ export function MobileNav() {
           />
           <div className="relative ml-auto w-4/5 max-w-sm h-full bg-[var(--color-ivory)] border-l border-[var(--color-border)] p-6 overflow-y-auto space-y-6">
             <div className="flex items-center justify-between pb-3 border-b border-[var(--color-border)]">
-              <span className="font-serif text-lg font-bold">HerCircle Menu</span>
+              <span className="font-serif text-lg font-bold">HerMaitri Menu</span>
               <button
                 onClick={() => setSheetOpen(false)}
                 className="p-1.5 rounded-full hover:bg-black/5"

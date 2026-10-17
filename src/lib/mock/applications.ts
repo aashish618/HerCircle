@@ -66,7 +66,7 @@ export const mockApplications: MembershipApplication[] = [
     aboutText: 'Looking for leads and freelance marketing opportunities.',
     status: 'declined',
     reviewerId: 'user-4',
-    reviewNote: 'HerCircle is a non-commercial community for women. Marketing and lead-generation profiles are not eligible.',
+    reviewNote: 'HerMaitri is a non-commercial community for women. Marketing and lead-generation profiles are not eligible.',
     createdAt: '2024-02-08T11:30:00Z',
     reviewedAt: '2024-02-08T15:00:00Z',
   }
