@@ -23,7 +23,7 @@ export function Sidebar() {
   const { isMember, isModerator } = useAuth();
 
   const memberNav = [
-    { label: 'Home Feed', href: '/feed', icon: Home },
+    { label: 'Live Feed', href: '/', icon: Home },
     { label: 'Explore Circles', href: '/circles', icon: Compass },
     { label: 'Ask Anonymously', href: '/ask', icon: MessageCircleQuestion },
     { label: 'Ask an Elder Sister', href: '/elder-sister', icon: HeartHandshake },

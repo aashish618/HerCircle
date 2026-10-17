@@ -16,7 +16,7 @@ export default function SignInPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setRole('member');
-    router.push('/feed');
+    router.push('/');
   };
 
   return (

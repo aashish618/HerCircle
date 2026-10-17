@@ -27,7 +27,7 @@ export function MobileNav() {
 
   const mainTabs = isMember
     ? [
-        { label: 'Feed', href: '/feed', icon: Home },
+        { label: 'Live Feed', href: '/', icon: Home },
         { label: 'Circles', href: '/circles', icon: Compass },
         { label: 'Ask', href: '/ask', icon: MessageCircleQuestion },
         { label: 'Sisters', href: '/elder-sister', icon: HeartHandshake },
@@ -98,12 +98,12 @@ export function MobileNav() {
               <div className="space-y-1">
                 <p className="text-[10px] uppercase font-bold text-[var(--color-muted)]">Pages</p>
                 <Link
-                  href={isMember ? '/feed' : '/'}
+                  href="/"
                   onClick={() => setSheetOpen(false)}
                   className="flex items-center space-x-2 py-2 text-sm text-[var(--color-charcoal)]"
                 >
                   <Home className="w-4 h-4 text-[var(--color-rose)]" />
-                  <span>{isMember ? 'Home Feed' : 'Welcome'}</span>
+                  <span>Live Feed</span>
                 </Link>
                 <Link
                   href="/circles"

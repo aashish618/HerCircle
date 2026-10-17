@@ -8,6 +8,9 @@ import { Badge } from '@/components/ui/badge';
 import { mockCircles } from '@/lib/mock/circles';
 import { mockDiscussions } from '@/lib/mock/discussions';
 import { mockMentors } from '@/lib/mock/mentors';
+import { PostCard } from '@/components/community/post-card';
+import { useAuth } from '@/contexts/auth-context';
+import { useDemo } from '@/contexts/demo-context';
 import {
   ShieldCheck,
   HeartHandshake,
@@ -32,8 +35,21 @@ import {
 } from 'lucide-react';
 
 export default function LandingPage() {
+  const { isMember } = useAuth();
+  const { createdDiscussions } = useDemo();
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [selectedFilter, setSelectedFilter] = useState('All Circles');
+  const [feedTab, setFeedTab] = useState<'all' | 'elder-sister' | 'trending'>('all');
+
+  const allDiscussions = [...createdDiscussions, ...mockDiscussions];
+  let discussionsToShow = allDiscussions;
+  if (feedTab === 'elder-sister') {
+    discussionsToShow = allDiscussions.filter((d) => d.circleSlug === 'ask-elder-sister');
+  } else if (feedTab === 'trending') {
+    discussionsToShow = [...allDiscussions].sort(
+      (a, b) => b.reactionCounts.helpful + b.commentCount - (a.reactionCounts.helpful + a.commentCount)
+    );
+  }
 
   const faqs = [
     {
@@ -277,6 +293,80 @@ export default function LandingPage() {
           <span className="w-8 h-1.5 rounded-full bg-gray-900" />
           <span className="w-2 h-1.5 rounded-full bg-gray-300" />
           <span className="w-2 h-1.5 rounded-full bg-gray-300" />
+        </div>
+      </section>
+
+      {/* ── SECTION: LIVE COMMUNITY DISCUSSIONS FEED ── */}
+      <section className="px-4 sm:px-8 space-y-5">
+        <div className="rounded-[28px] border border-purple-200/70 bg-white/80 backdrop-blur-md p-6 sm:p-7 space-y-5 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-purple-100">
+            <div>
+              <div className="flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse" />
+                <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-950 font-sans">
+                  Live Community Feed
+                </h2>
+              </div>
+              <p className="text-xs text-purple-950/70 font-medium mt-0.5">
+                Real reflections, anonymous inquiries, and grounded advice from sisters across India
+              </p>
+            </div>
+
+            {/* Feed Filter Tabs */}
+            <div className="flex items-center space-x-2 overflow-x-auto no-scrollbar">
+              <button
+                onClick={() => setFeedTab('all')}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition ${
+                  feedTab === 'all'
+                    ? 'bg-purple-900 text-white shadow-sm'
+                    : 'bg-white border border-purple-200 text-purple-950 hover:bg-purple-50'
+                }`}
+              >
+                All Discussions
+              </button>
+              <button
+                onClick={() => setFeedTab('elder-sister')}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition ${
+                  feedTab === 'elder-sister'
+                    ? 'bg-purple-900 text-white shadow-sm'
+                    : 'bg-white border border-purple-200 text-purple-950 hover:bg-purple-50'
+                }`}
+              >
+                Ask an Elder Sister
+              </button>
+              <button
+                onClick={() => setFeedTab('trending')}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition ${
+                  feedTab === 'trending'
+                    ? 'bg-purple-900 text-white shadow-sm'
+                    : 'bg-white border border-purple-200 text-purple-950 hover:bg-purple-50'
+                }`}
+              >
+                Trending Topics
+              </button>
+            </div>
+          </div>
+
+          {/* Discussions Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {discussionsToShow.slice(0, 6).map((disc) => (
+              <PostCard key={disc.id} discussion={disc} />
+            ))}
+          </div>
+
+          <div className="pt-2 flex items-center justify-between">
+            <Link href="/discussions/new">
+              <Button size="sm" className="bg-purple-950 hover:bg-black text-white rounded-full px-5 py-2 text-xs font-semibold shadow-sm inline-flex items-center space-x-1.5">
+                <Plus className="w-3.5 h-3.5" />
+                <span>Start New Discussion</span>
+              </Button>
+            </Link>
+
+            <Link href="/circles" className="text-xs font-semibold text-purple-800 hover:underline inline-flex items-center">
+              <span>View all 9 circles</span>
+              <ArrowRight className="w-3.5 h-3.5 ml-1" />
+            </Link>
+          </div>
         </div>
       </section>
 

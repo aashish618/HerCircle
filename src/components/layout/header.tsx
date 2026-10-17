@@ -25,7 +25,7 @@ export function Header() {
       <div className="max-w-[1360px] mx-auto px-4 sm:px-8 h-18 flex items-center justify-between gap-4">
         {/* Brand logo - Minimalist geometric mark matching reference */}
         <div className="flex items-center space-x-3">
-          <Link href={isMember ? '/feed' : '/'} className="flex items-center space-x-2.5 group">
+          <Link href="/" className="flex items-center space-x-2.5 group">
             <div className="w-9 h-9 rounded-xl bg-gray-950 text-white flex items-center justify-center font-bold text-lg shadow-sm group-hover:scale-105 transition-transform">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14" />
@@ -58,7 +58,7 @@ export function Header() {
           </Link>
 
           <Link
-            href={isMember ? '/feed' : '/'}
+            href="/"
             className={`flex items-center space-x-1 px-3.5 py-1.5 rounded-full transition ${
               pathname === '/' || pathname === '/feed'
                 ? 'bg-blue-50 text-blue-700 font-semibold shadow-xs'
