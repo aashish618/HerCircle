@@ -20,7 +20,7 @@ export default function ProfilePage() {
   return (
     <div className="space-y-8 py-2">
       {/* Profile Card */}
-      <div className="rounded-2xl border border-[var(--color-border)] bg-white/95 p-6 md:p-8 space-y-5 shadow-[var(--shadow-card)]">
+      <div className="rounded-2xl border border-[var(--color-border)] bg-white/95 p-6 md:p-8 space-y-5 shadow-[var(--shadow-card)] card-3d scroll-reveal">
         <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
           <Avatar name={user.displayName} size="xl" />
           <div className="space-y-1">

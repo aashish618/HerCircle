@@ -59,7 +59,7 @@ export default function ElderSisterPage() {
       </div>
 
       {/* Featured Mentors */}
-      <section className="space-y-4">
+      <section className="space-y-4 scroll-reveal">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-serif text-2xl font-bold text-gray-950">
@@ -69,7 +69,7 @@ export default function ElderSisterPage() {
               Profiles based on verified stated experience across engineering, health, law, and education
             </p>
           </div>
-          <Link href="/mentors" className="text-xs font-semibold text-purple-800 hover:underline flex items-center">
+          <Link href="/mentors" className="text-xs font-semibold text-purple-800 hover:underline flex items-center click-zoom">
             View all 12 mentors <ArrowRight className="w-3.5 h-3.5 ml-1" />
           </Link>
         </div>
@@ -82,7 +82,7 @@ export default function ElderSisterPage() {
       </section>
 
       {/* Recent Elder Sister Advice Threads */}
-      <section className="space-y-4">
+      <section className="space-y-4 scroll-reveal">
         <div>
           <h2 className="font-serif text-2xl font-bold text-gray-950">
             Recent Advice & Life Guidance Threads

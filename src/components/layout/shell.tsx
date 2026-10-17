@@ -8,6 +8,7 @@ import { MobileNav } from './mobile-nav';
 import { PrototypeBanner } from '@/components/shared/prototype-banner';
 import { RoleSwitcher } from './role-switcher';
 import { Background3D } from '@/components/shared/background-3d';
+import { ScrollObserver } from '@/components/shared/scroll-observer';
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -16,6 +17,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#DDD4FA]/80 via-[#D3C3F8]/70 to-[#E4CEF8]/80 text-[var(--color-charcoal)] antialiased relative overflow-x-hidden">
       <Background3D />
+      <ScrollObserver />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
@@ -47,13 +49,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <Header />
 
         {isLanding ? (
-          <main id="main-content" className="flex-1 w-full relative z-10">
+          <main id="main-content" key={pathname} className="flex-1 w-full relative z-10 animate-page-zoom">
             {children}
           </main>
         ) : (
           <div className="flex-1 flex w-full relative z-10">
             <Sidebar />
-            <main id="main-content" className="flex-1 px-4 sm:px-6 lg:px-8 py-6 pb-20 md:pb-8 max-w-5xl">
+            <main id="main-content" key={pathname} className="flex-1 px-4 sm:px-6 lg:px-8 py-6 pb-20 md:pb-8 max-w-5xl animate-page-zoom">
               {children}
             </main>
           </div>

@@ -61,7 +61,7 @@ export default function CirclesPage() {
         {filteredCircles.map((circle) => (
           <div
             key={circle.id}
-            className="rounded-[24px] border border-purple-200/80 bg-white/90 backdrop-blur-sm p-6 shadow-sm card-3d flex flex-col justify-between space-y-4 hover:border-purple-400 hover:shadow-md transition group"
+            className="rounded-[24px] border border-purple-200/80 bg-white/90 backdrop-blur-sm p-6 shadow-sm card-3d scroll-reveal click-zoom flex flex-col justify-between space-y-4 hover:border-purple-400 hover:shadow-md transition group"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">

@@ -31,7 +31,7 @@ export function MentorCard({ mentor }: { mentor: MentorProfile }) {
 
   return (
     <>
-      <div className="rounded-2xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-5 shadow-[var(--shadow-card)] card-3d flex flex-col justify-between space-y-4">
+      <div className="rounded-2xl border border-[var(--color-border)] bg-white/95 backdrop-blur-sm p-5 shadow-[var(--shadow-card)] card-3d scroll-reveal flex flex-col justify-between space-y-4">
         <div className="space-y-3">
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center space-x-3">

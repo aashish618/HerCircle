@@ -130,7 +130,7 @@ export default function LandingPage() {
         {/* ── HORIZONTAL CAROUSEL SHOWCASE (Matching Image 1) ── */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
           {/* Card 1: Lavender Discussion Card (Span 4) */}
-          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-3d relative overflow-hidden min-h-[420px]">
+          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#DDD4FA] via-[#D8CBFA] to-[#C8B8F6] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-3d scroll-reveal click-zoom relative overflow-hidden min-h-[420px]">
             {/* Top row */}
             <div className="flex items-center justify-between">
               <div className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-purple-900 shadow-xs">
@@ -182,7 +182,7 @@ export default function LandingPage() {
                 3.8k Members
               </span>
               <Link href="/discussions/disc-1">
-                <button className="px-4 py-1.5 rounded-full bg-white/80 hover:bg-white text-purple-950 text-xs font-bold shadow-xs hover:shadow transition inline-flex items-center space-x-1">
+                <button className="px-4 py-1.5 rounded-full bg-white/80 hover:bg-white text-purple-950 text-xs font-bold shadow-xs hover:shadow transition inline-flex items-center space-x-1 click-zoom">
                   <span>Join</span>
                   <ArrowRight className="w-3 h-3" />
                 </button>
@@ -191,7 +191,7 @@ export default function LandingPage() {
           </div>
 
           {/* Card 2: Spotlight Mentor Centerpiece (Span 4) */}
-          <div className="md:col-span-4 rounded-[28px] relative overflow-hidden shadow-md card-3d min-h-[420px] flex flex-col justify-between group">
+          <div className="md:col-span-4 rounded-[28px] relative overflow-hidden shadow-md card-3d scroll-reveal click-zoom min-h-[420px] flex flex-col justify-between group">
             {/* Background Mentor Photo */}
             <img
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
@@ -212,7 +212,7 @@ export default function LandingPage() {
             </div>
 
             {/* Bottom Overlay Card matching Image 1 */}
-            <div className="relative z-10 m-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg flex items-center justify-between">
+            <div className="relative z-10 m-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg flex items-center justify-between click-zoom">
               <div>
                 <h3 className="text-sm font-bold text-gray-950 leading-tight">
                   Dr. Ananya&apos;s Tech Corner
@@ -223,7 +223,7 @@ export default function LandingPage() {
               </div>
               <Link
                 href="/mentors/mentor-1"
-                className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-800 transition shrink-0 ml-3"
+                className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-800 transition shrink-0 ml-3 click-zoom"
                 aria-label="View Mentor"
               >
                 <ArrowUpRight className="w-4 h-4" />
@@ -232,7 +232,7 @@ export default function LandingPage() {
           </div>
 
           {/* Card 3: Mindful / Wellness Frosted Card with 3D Floating Bubbles (Span 4) */}
-          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#D8E8F5] via-[#CEE0F0] to-[#BED6EC] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-3d relative overflow-hidden min-h-[420px]">
+          <div className="md:col-span-4 rounded-[28px] bg-gradient-to-br from-[#D8E8F5] via-[#CEE0F0] to-[#BED6EC] p-6 sm:p-7 flex flex-col justify-between shadow-sm card-3d scroll-reveal click-zoom relative overflow-hidden min-h-[420px]">
             {/* Top row */}
             <div className="flex items-center justify-between relative z-10">
               <div className="w-9 h-9 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-blue-900 shadow-xs">
@@ -297,7 +297,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── SECTION: LIVE COMMUNITY DISCUSSIONS FEED ── */}
-      <section className="px-4 sm:px-8 space-y-5">
+      <section className="px-4 sm:px-8 space-y-5 scroll-reveal">
         <div className="rounded-[28px] border border-purple-200/70 bg-white/80 backdrop-blur-md p-6 sm:p-7 space-y-5 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-purple-100">
             <div>
@@ -371,7 +371,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── SECTION 2: DARK SANCTUARY SHOWCASE (Matching Image 2 - Left) ── */}
-      <section className="px-4 sm:px-8">
+      <section className="px-4 sm:px-8 scroll-reveal">
         <div className="rounded-[32px] sm:rounded-[36px] bg-[#121118] text-white p-8 sm:p-14 md:p-16 relative overflow-hidden shadow-2xl">
           {/* Ambient Glows */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
@@ -437,7 +437,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── SECTION 3: LILAC CELEBRATION & CIRCLES (Matching Image 2 - Bottom Right) ── */}
-      <section className="px-4 sm:px-8">
+      <section className="px-4 sm:px-8 scroll-reveal">
         <div className="rounded-[32px] sm:rounded-[36px] bg-[#DDD4FA] p-8 sm:p-12 text-gray-950 relative overflow-hidden shadow-sm">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
@@ -453,7 +453,7 @@ export default function LandingPage() {
             </div>
 
             <Link href="/circles">
-              <Button className="rounded-full bg-gray-950 hover:bg-black text-white px-5 py-2 text-xs font-semibold shadow-sm">
+              <Button className="rounded-full bg-gray-950 hover:bg-black text-white px-5 py-2 text-xs font-semibold shadow-sm click-zoom">
                 Explore All 9 Circles <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
               </Button>
             </Link>
@@ -465,7 +465,7 @@ export default function LandingPage() {
               <Link
                 key={circle.id}
                 href={`/circles/${circle.slug}`}
-                className="rounded-2xl bg-white/80 hover:bg-white p-5 transition shadow-xs hover:shadow-md flex flex-col justify-between group"
+                className="rounded-2xl bg-white/80 hover:bg-white p-5 transition shadow-xs hover:shadow-md flex flex-col justify-between group card-3d click-zoom scroll-reveal"
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -492,7 +492,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── SECTION 4: DARK FAQS & ANSWERED QUESTIONS (Matching Image 2 - Top Right) ── */}
-      <section className="px-4 sm:px-8">
+      <section className="px-4 sm:px-8 scroll-reveal">
         <div className="rounded-[32px] sm:rounded-[36px] bg-[#14121A] text-white p-8 sm:p-12 md:p-16 relative overflow-hidden shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column: Heading + App Badges matching Image 2 */}
@@ -521,13 +521,13 @@ export default function LandingPage() {
 
               {/* Install / PWA Badges */}
               <div className="flex flex-wrap items-center gap-2 pt-2">
-                <div className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-medium text-gray-200 flex items-center space-x-2 cursor-pointer">
+                <div className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-medium text-gray-200 flex items-center space-x-2 cursor-pointer click-zoom">
                   <span>📱 Download PWA</span>
                 </div>
-                <div className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-medium text-gray-200 flex items-center space-x-2 cursor-pointer">
+                <div className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-medium text-gray-200 flex items-center space-x-2 cursor-pointer click-zoom">
                   <span>Google Play</span>
                 </div>
-                <div className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-medium text-gray-200 flex items-center space-x-2 cursor-pointer">
+                <div className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-medium text-gray-200 flex items-center space-x-2 cursor-pointer click-zoom">
                   <span>App Store</span>
                 </div>
               </div>
@@ -540,7 +540,7 @@ export default function LandingPage() {
             {/* Right Column: Featured Testimonial + Interactive Accordion */}
             <div className="lg:col-span-7 space-y-5">
               {/* Featured Sister Testimonial Card */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-5 sm:p-6 space-y-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-5 sm:p-6 space-y-3 card-3d click-zoom">
                 <div className="flex items-center space-x-1 text-amber-400 text-sm">
                   {'★'.repeat(5)}
                 </div>
@@ -569,7 +569,7 @@ export default function LandingPage() {
                   return (
                     <div
                       key={idx}
-                      className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden transition"
+                      className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden transition click-zoom"
                     >
                       <button
                         onClick={() => setActiveFaq(isOpen ? null : idx)}

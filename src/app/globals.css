@@ -300,24 +300,110 @@ body {
   transform-style: preserve-3d;
 }
 
+/* ── Interactive Click & Hover Zoom Effects ── */
+.click-zoom {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.click-zoom:hover {
+  transform: scale(1.025) translateY(-2px);
+}
+
+.click-zoom:active {
+  transform: scale(0.96) translateY(1px);
+}
+
 .card-3d {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1);
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .card-3d:hover {
-  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translate3d(0, -6px, 12px);
-  box-shadow: 0 20px 40px -15px rgba(50, 30, 90, 0.16), 0 0 20px rgba(168, 85, 247, 0.12);
+  transform: perspective(1000px) scale(1.02) rotateX(1.5deg) rotateY(-1.5deg) translate3d(0, -5px, 8px);
+  box-shadow: 0 25px 45px -12px rgba(90, 40, 180, 0.22), 0 0 25px rgba(168, 85, 247, 0.16);
+}
+
+.card-3d:active {
+  transform: perspective(1000px) scale(0.975) translateY(2px);
+  transition-duration: 0.1s;
+}
+
+/* ── Page Transition Zoom & Fade ── */
+@keyframes page-enter-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.985) translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-page-zoom {
+  animation: page-enter-zoom 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Scroll-Driven Entry Reveal & Zoom ── */
+@keyframes scroll-zoom-reveal {
+  from {
+    opacity: 0.4;
+    transform: translateY(26px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.scroll-reveal {
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Cross-browser IntersectionObserver fallback classes */
+.scroll-reveal.not-revealed {
+  opacity: 0.4;
+  transform: translateY(24px) scale(0.95);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Native CSS Scroll-driven animations with feature detection */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    .scroll-reveal {
+      animation: scroll-zoom-reveal auto cubic-bezier(0.16, 1, 0.3, 1) backwards;
+      animation-timeline: view();
+      animation-range: entry 5% cover 25%;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-float-slow,
   .animate-float-reverse,
-  .animate-pulse-slow {
+  .animate-float-drift,
+  .animate-float-bob,
+  .animate-bubble-rise,
+  .animate-aura-glow,
+  .animate-pulse-slow,
+  .animate-page-zoom,
+  .scroll-reveal {
     animation: none !important;
+    transition: none !important;
+    transform: none !important;
   }
-  .card-3d:hover {
+  .card-3d:hover,
+  .card-3d:active,
+  .click-zoom:hover,
+  .click-zoom:active {
     transform: none !important;
   }
 }
+
 
