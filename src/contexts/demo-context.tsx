@@ -5,6 +5,7 @@ import {
   Discussion,
   Comment,
   Report,
+  ReportCategory,
   MembershipApplication,
   ReactionType,
   ReportStatus,

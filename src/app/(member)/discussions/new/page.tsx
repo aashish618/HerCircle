@@ -11,7 +11,7 @@ import { mockCircles } from '@/lib/mock/circles';
 import { ArrowLeft, Sparkles, Image as ImageIcon } from 'lucide-react';
 import Link from 'next/link';
 
-export default function NewDiscussionPage() {
+function NewDiscussionForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const defaultCircle = searchParams.get('circle') || 'career-education';
@@ -151,5 +151,13 @@ export default function NewDiscussionPage() {
         </div>
       </form>
     </div>
+  );
+}
+
+export default function NewDiscussionPage() {
+  return (
+    <React.Suspense fallback={<div className="py-12 text-center text-xs text-[var(--color-muted)]">Loading discussion composer...</div>}>
+      <NewDiscussionForm />
+    </React.Suspense>
   );
 }

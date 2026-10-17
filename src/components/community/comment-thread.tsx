@@ -89,8 +89,6 @@ export function CommentThread({ discussionId, initialComments }: CommentThreadPr
             replyText={replyText}
             setReplyText={setReplyText}
             handleReplySubmit={handleReplySubmit}
-            isAnonymous={isAnonymous}
-            setIsAnonymous={setIsAnonymous}
           />
         ))}
       </div>
